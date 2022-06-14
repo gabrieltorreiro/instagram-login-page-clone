@@ -1,0 +1,153 @@
+:root {
+    --blue: #0095f6;
+    --facebook: #385185;
+    --default-font-color: #00376b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--default-font-color)
+}
+
+.root {
+    display: flex;
+    justify-content: space-around;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.root__left {
+    position: relative;
+    background-image: url(./img/cell-phone-frame.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+
+@media screen and (max-width: 876px) {
+    .root__left {
+        display: none;
+    }
+}
+
+.root__left img {
+    position: absolute;
+    width: 190px;
+    top: 85px;
+    left: 119px;
+}
+
+.root__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    row-gap: 10px;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 40px;
+    border-radius: 3px;
+}
+
+.right__login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.login__logo {
+    padding: 30px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+}
+
+.login__form input[type="text"] {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form__button {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: var(--blue);
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.login__separator {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.separator__text {
+    /* background-color: blue; */
+    margin: 0 6px;
+}
+
+.separator__left-line,
+.separator__right-line {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+}
+
+.login__facebook-login {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--facebook)
+}
+
+.login__forgot-password {
+    font-weight: bold;
+}
+
+.right__signup {
+    text-align: center;
+    padding: 20px;
+}
+
+.signup__link {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--blue)
+}
+
+.right__app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.app__text {
+    text-align: center;
+    padding: 20px;
+}
+
+.app__logos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.app__logos img {
+    width: 50%;
+}
