@@ -8,47 +8,62 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Instagram</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="root">
-        <div class="root__left">
-            <img src="./img/cell-phone.png" alt="" srcset="">
-        </div>
-        <div class="root__right">
-            <div class="right__login card">
-                <div class="login__logo">
-                    <img src="./img/instagram-logo.png" alt="" srcset="">
-                </div>
-                <form class="login__form" action="">
-                    <input type="text" placeholder="Phone number, username, or email" name="" id="">
-                    <input type="text" placeholder="Password" name="" id="">
-                    <input class="form__button" type="submit" value="Log In">
-                </form>
-                <div class="login__separator">
-                    <div class="separator__left-line"></div>
-                    <div class="separator__text">OR</div>
-                    <div class="separator__right-line"></div>
-                </div>
-                <div class="login__facebook-login">
-                    Log in with Facebook
-                </div>
-                <div class="login__forgot-password">
-                    Forgot password?
-                </div>
+        <div class="root__container">
+            <div class="container__left">
+                <a href="#">
+                    <img src="./img/cell-phone.png" alt="" srcset="">
+                </a>
+            </div>
+            <div class="container__right">
+                <div class="right__login card">
+                    <div class="login__logo">
+                        <img src="./img/instagram-logo.png" alt="" srcset="">
+                    </div>
+                    <form class="login__form" action="">
+                        <input class="form__text" type="text" placeholder="Phone number, username, or email" name=""
+                            id="">
+                        <input class="form__text" type="text" placeholder="Password" name="" id="">
+                        <input class="form__button" type="submit" value="Log In">
+                    </form>
+                    <div class="login__separator">
+                        <div class="separator__left-line"></div>
+                        <div class="separator__text">OR</div>
+                        <div class="separator__right-line"></div>
+                    </div>
+                    <div class="login__facebook-login">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        Log in with Facebook
+                    </div>
+                    <div class="login__forgot-password">
+                        <a href="#">
+                            Forgot password?
+                        </a>
+                    </div>
 
-            </div>
-            <div class="right__signup card">
-                Don't have an account?
-                <a class="signup__link"" href=" #">Sign up</a>
-            </div>
-            <div class="right__app">
-                <div class="app__text">
-                    Get the app
                 </div>
-                <div class="app__logos">
-                    <img src="./img/apple-logo.png" alt="" srcset="">
-                    <img src="./img/google-logo.png" alt="" srcset="">
+                <div class="right__signup card">
+                    Don't have an account?
+                    <a class="signup__link"" href=" #">Sign up</a>
+                </div>
+                <div class="right__app">
+                    <p class="app__text">
+                        Get the app
+                    </p>
+                    <div class="app__logos">
+                        <a href="#">
+                            <img src="./img/apple-logo.png" alt="" srcset="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/google-logo.png" alt="" srcset="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

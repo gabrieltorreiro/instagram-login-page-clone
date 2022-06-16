@@ -12,40 +12,54 @@
     color: var(--default-font-color)
 }
 
-.root {
-    display: flex;
-    justify-content: space-around;
-    max-width: 700px;
-    margin: auto;
-    margin-top: 90px;
+a {
+    text-decoration: none;
 }
 
-.root__left {
+.root {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.root__container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container__left {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     position: relative;
     background-image: url(./img/cell-phone-frame.png);
-    background-size: contain;
+    background-size: 468px 634px;
     background-repeat: no-repeat;
-    background-position: center center;
-    width: 100%;
+    width: 468px;
+    height: 634px;
 }
 
 @media screen and (max-width: 876px) {
-    .root__left {
+    .container__left {
         display: none;
     }
 }
 
-.root__left img {
+.container__left img {
     position: absolute;
-    width: 190px;
-    top: 85px;
-    left: 119px;
+    width: 250px;
+    top: 28px;
+    left: 160px;
 }
 
-.root__right {
+.container__right {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
     row-gap: 10px;
 }
 
@@ -55,15 +69,27 @@
     border-radius: 3px;
 }
 
+@media screen and (max-width: 500px) {
+    .card {
+        border: none;
+        width: 100%;
+    }
+}
+
 .right__login {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
+    padding-bottom: 25px;
 }
 
 .login__logo {
-    padding: 30px;
+    padding: 24px;
+}
+
+.login__logo>img {
+    cursor: pointer;
 }
 
 .login__form {
@@ -73,13 +99,18 @@
     width: 100%;
 }
 
-.login__form input[type="text"] {
+.form__text {
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.form__text:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .form__button {
-    padding: 10px;
+    padding: 8px 10px;
     font-weight: bold;
     font-size: 15px;
     color: white;
@@ -88,66 +119,82 @@
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .login__separator {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
     width: 100%;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .separator__text {
-    /* background-color: blue; */
     margin: 0 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8e8e8e;
 }
 
 .separator__left-line,
 .separator__right-line {
     height: 1px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
 }
 
 .login__facebook-login {
     font-weight: bold;
-    margin-bottom: 20px;
-    color: var(--facebook)
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--facebook);
+    cursor: pointer;
+}
+
+.login__facebook-login>i {
+    font-size: 18px;
+    margin-right: 5px;
 }
 
 .login__forgot-password {
-    font-weight: bold;
+    font-size: 12px;
 }
 
 .right__signup {
     text-align: center;
     padding: 20px;
+    font-size: 15px;
 }
 
 .signup__link {
     font-weight: bold;
-    text-decoration: none;
     color: var(--blue)
 }
 
 .right__app {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
 }
 
 .app__text {
     text-align: center;
+    color: black;
+    font-size: 15px;
     padding: 20px;
 }
 
 .app__logos {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    margin: 0px 40px;
 }
 
-.app__logos img {
-    width: 50%;
+.app__logos>a>img {
+    height: 40px;
 }
